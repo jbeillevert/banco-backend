@@ -1,19 +1,31 @@
-import Knex from "knex";
+const Knex = require('knex')
+const path = require('path')
 
-const path = require('path');
+
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 
 
 const knexConfig = {
-    client: 'pg',
+    client: 'pg', // ici probleme avec variable environnement
     connection: {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME,
-    }
+        user: 'root', // ici probleme avec variable environnement
+        password: 'root', // ici probleme avec variable environnement
+        database: 'postgres', // ici probleme avec variable environnement
+    }  
 }
+
+console.log('ici je log dans mon db ts');
+
+console.log({
+    DB_CLIENT: process.env.DB_CLIENT,
+    DB_HOST: process.env.DB_HOST,
+    DB_PORT: process.env.DB_PORT,
+    DB_USER: process.env.DB_USER,
+    DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME,
+  });
 
 const knex = Knex(knexConfig)
 

@@ -8,7 +8,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe())
-  await app.listen(process.env.SERVOR_PORT);
+  await app.listen(3000); // ici probleme avec variable environnement
 }
 
 bootstrap();

@@ -5,8 +5,9 @@
     - 🟢 retourner tableau vide au lieu d'erreur (showAllAccounts - bancoService)
     - 🟢 changer les noms en français
     - 🟢 réparer bug requete create account
+    - 🟢 mettre en place variable d'environnement
+    - 🟠 test variables d'environnement
     - revoir les codes d'erreur banco
-    - Problème variables d'environnement fichier migration bdd
 
     New features :
     - 🟢 Ajouter DTO

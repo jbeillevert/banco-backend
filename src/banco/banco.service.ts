@@ -1,7 +1,6 @@
 import { Injectable, NotFoundException, BadRequestException, ForbiddenException } from '@nestjs/common';
 import { BancoRepository } from './banco.repository';
 import { bankAccount } from './bankAccount.model';
-import { user } from 'src/auth/user.model';
 
 @Injectable()
 export class BancoService {
