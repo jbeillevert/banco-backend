@@ -1,4 +1,4 @@
-import knex from "../../../database/db";
+import knex from "../../../db";
 
 
 export const getAllAccountsQuery = async (userId: number) => {

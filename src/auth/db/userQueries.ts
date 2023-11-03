@@ -1,5 +1,5 @@
 import { UUID } from "crypto";
-import knex from "../../../database/db";
+import knex from "../../../db";
 
 
 

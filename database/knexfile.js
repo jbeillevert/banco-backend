@@ -1,10 +1,15 @@
-
+const { resolve } = require('path')
 
 require('dotenv').config({ path: resolve(__dirname, '../.env') })
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+
+const user = process.env.DB_USER
+console.log('ici userr: ', user);
+
 
 console.log('ici je log dans mon knexfile');
 
@@ -17,7 +22,7 @@ console.log({
     DB_NAME: process.env.DB_NAME,
   });
 
-export const development = {
+const development = {
   client: process.env.DB_CLIENT,
   connection: {
     host: process.env.DB_HOST,
@@ -38,3 +43,5 @@ export const development = {
     directory: './seeds',
   },
 };
+
+module.exports = { development }
