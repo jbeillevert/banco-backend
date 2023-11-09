@@ -6,8 +6,8 @@
     - 🟢 changer les noms en français
     - 🟢 réparer bug requete create account
     - 🟢 mettre en place variable d'environnement
-    - 🟠 test variables d'environnement
-    - revoir les codes d'erreur banco
+    - 🟢 test variables d'environnement
+    - 🟠 revoir les codes d'erreur banco
 
     New features :
     - 🟢 Ajouter DTO
@@ -27,7 +27,6 @@
     - 🟢 Création role Admin
     - 🟢 connexion a l'admin
     - 🟠 verifier si l'user est admin pour autoriser la requete
-    - Ajouter requete pour montrer les users sans mot de passe
     - Documentation avec Swagger
 
     */

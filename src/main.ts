@@ -5,10 +5,13 @@ import { ValidationPipe } from '@nestjs/common';
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 
+const port = process.env.SERVOR_PORT
+
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe())
-  await app.listen(3000); // ici probleme avec variable environnement
+  await app.listen(port); 
 }
 
 bootstrap();
