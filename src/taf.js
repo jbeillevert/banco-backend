@@ -7,7 +7,7 @@
     - 🟢 réparer bug requete create account
     - 🟢 mettre en place variable d'environnement
     - 🟢 test variables d'environnement
-    - 🟠 revoir les codes d'erreur banco
+    - 🟢 revoir les codes d'erreur banco
 
     New features :
     - 🟢 Ajouter DTO

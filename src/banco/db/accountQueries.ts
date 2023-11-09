@@ -5,7 +5,11 @@ export const getAllAccountsQuery = async (userId: number) => {
     return knex.select('*').from('accounts').where('user_id', '=', userId)
 }
 
-export const getOneAccountQuery = async (accountNumber: number, userId: number) => {
+export const getOneAccountQuery = async (accountNumber: number) => {
+    return knex.select('*').from('accounts').where('account_number', '=', accountNumber)
+}
+
+export const getOneAccountWithUserIDQuery = async (accountNumber: number, userId: number) => {
     return knex.select('*').from('accounts').where('account_number', '=', accountNumber).andWhere('user_id', '=', userId)
 }
 

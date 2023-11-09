@@ -1,6 +1,7 @@
 import {
     getAllAccountsQuery, 
     getOneAccountQuery, 
+    getOneAccountWithUserIDQuery,
     createAnAccountQuery, 
     depositAmountQuery, 
     withdrawAmountQuery,
@@ -12,8 +13,12 @@ export class BancoRepository {
         return await getAllAccountsQuery(userId)
     }
 
-    async getOneAccountRepository(accountNumber: number, userId: number) {
-        return await getOneAccountQuery(accountNumber, userId)
+    async getOneAccountRepository(accountNumber: number) {
+        return await getOneAccountQuery(accountNumber)
+    }
+
+    async getOneAccountWithUserIDRepository(accountNumber: number, userId: number) {
+        return await getOneAccountWithUserIDQuery(accountNumber, userId)
     }
 
     async deleteOneAccountRepository(accountNumber: number, userId: number) {
