@@ -17,7 +17,6 @@ export const isUserExistInDBQuery = async (emailTested: string) => {
     return result.length > 0
 }
 
-// attention requete renvoie le mot de passe user
 export const findUserByEmailQuery = async (email: string) => {
     const result = await knex.select('*').from('users').where('email', '=', email)
     return result[0]

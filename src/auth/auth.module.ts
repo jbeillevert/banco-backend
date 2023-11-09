@@ -6,7 +6,7 @@ import { AuthRepository } from './auth.repository';
 import { JwtStrategy } from './jwt.strategy';  
 import { PassportModule } from '@nestjs/passport';  
 import { JwtModule } from '@nestjs/jwt';  
-import { RolesGuard } from 'src/tools/guards/roles.guards';
+import { RolesGuard } from '../tools/RBAC/roles.guards'
 
 
 @Module({
@@ -17,7 +17,7 @@ import { RolesGuard } from 'src/tools/guards/roles.guards';
       signOptions: { expiresIn: '1h' },
     }),
   ],
-  providers: [AuthService, AuthRepository, JwtStrategy],  
+  providers: [AuthService, AuthRepository, JwtStrategy, RolesGuard],  
   controllers: [AuthController],
 })
 
