@@ -12,13 +12,10 @@ export class RolesGuard extends AuthGuard('jwt') {
 
 
   canActivate(context: ExecutionContext): boolean {
-    console.log('Inside canActivate of RolesGuard');
     const requiredRoles = this.reflector.getAllAndOverride<Role[]>(ROLES_KEY, [
       context.getHandler(),
       context.getClass(),
     ]);
-
-    console.log('Required roles:', requiredRoles);
 
 
 
@@ -26,10 +23,8 @@ export class RolesGuard extends AuthGuard('jwt') {
       return true;
     }
     const { user } = context.switchToHttp().getRequest();
-    console.log('User from request:', user);
 
     const hasRole = requiredRoles.some((role) => user.role === role);
-    console.log('Has role:', hasRole);
 
     return hasRole
   }

@@ -8,6 +8,8 @@
     - 🟢 mettre en place variable d'environnement
     - 🟢 test variables d'environnement
     - 🟢 revoir les codes d'erreur banco
+    - revoir code erreur 403 (reservé auth) (412 409 422)
+    - renvoyer json au lieu de texte brut
 
     New features :
     - 🟢 Ajouter DTO
